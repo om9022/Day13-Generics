@@ -10,8 +10,25 @@ public class FindMaximum {
 		Double doubleNumber2 = 800.0;
 		Double doubleNumber3 = 800.90;
 		
+		String fruit1 = "Apple";
+		String fruit2 = "Banana";
+		String fruit3 = "Peach";
+		
 		findMaximumNumber(number1, number2, number3);
 		findMaximumNumber(doubleNumber1, doubleNumber2, doubleNumber3);
+		findMaximumString(fruit1, fruit2, fruit3);
+	}
+
+	private static void findMaximumString(String fruit1, String fruit2, String fruit3) {
+		// TODO Auto-generated method stub
+		String maxmimumString = fruit1;
+		if(maxmimumString.compareTo(fruit2) < 0) {
+			maxmimumString = fruit2;
+		}
+		if(maxmimumString.compareTo(fruit3) < 0) {
+			maxmimumString = fruit3;
+		}
+		System.out.println("Maximum String is : " + maxmimumString);
 	}
 
 	private static void findMaximumNumber(Double doubleNumber1, Double doubleNumber2, Double doubleNumber3) {
