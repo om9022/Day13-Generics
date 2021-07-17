@@ -40,16 +40,20 @@ public class FindMaximum <T extends Comparable<T>>
 			{
 				maximum = value3;
 			}
-			System.out.println("The Maximum is "+ maximum);			
+			printMax(maximum);			
 			break;
 		case 2:
 			Arrays.sort(valueArray);
-			System.out.println("The Maximum is " + valueArray[2]);
+			printMax(valueArray[2]);
 			break;
 		default:
 			System.err.println("Wrong input value");
 			break;
 		}
+	}
+
+	private static <T> void printMax(T maximum) {
+		System.out.println("The Maximum is "+ maximum);
 	}
 
 	public static void main(String[] args)
@@ -77,6 +81,5 @@ public class FindMaximum <T extends Comparable<T>>
 
 		FindMaximum<String> stringValue  = new FindMaximum<String>(fruit1,fruit2,fruit3,strFruits);
 		stringValue.findMaxUsingCompare();
-
 	}
 }
